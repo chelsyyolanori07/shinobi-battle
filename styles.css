@@ -28,7 +28,7 @@
     background-color: rgb(228, 217, 217);
     opacity: 0.8;
     border-radius: 50px; 
-    font-size: 0.8em; 
+    font-size: 0.6em; 
 }
 
 body {
@@ -53,7 +53,7 @@ body {
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
     padding: 20px;
-    margin: 30px auto;
+    margin: 10px auto;
     max-width: 750px;
     text-align: center;
     font-size: 14px;
@@ -62,7 +62,7 @@ body {
 }
 
 .character-name {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .interface a {
@@ -71,15 +71,15 @@ body {
 }
   
 .interface img {
-    width: 200px;
+    width: 180px;
     height: auto;
     border-radius: 50%;
     margin-bottom: 10px;
 }
 
 .img-avatar {
-    width: 200px !important;
-    height: 200px !important;
+    width: 180px !important;
+    height: 180px !important;
 }
 
 .header p {
@@ -102,14 +102,14 @@ body {
 
 .interface h3 {
     font-family: 'Ninja Naruto', sans-serif;
-    font-size: 23px;
+    font-size: 20px;
     padding: 25px;
     margin-left: -5px;
 }
 
 .interface p {
     font-family: 'Asian Ninja', sans-serif;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 18px;
     margin-bottom: 10px;
     margin-left: -5px;
@@ -217,7 +217,7 @@ body {
 } 
 
 .enemy img {
-    width: 200px;
+    width: 180px;
     height: auto;
     border-radius: 50%;
     margin-bottom: 10px;
@@ -225,14 +225,14 @@ body {
 
 .enemy h3 {
     font-family: 'Ninja Naruto', sans-serif;
-    font-size: 23px;
+    font-size: 20px;
     padding: 25px;
-    margin-left: -20px;
+    margin-left: -5px;
 }
 
 .enemy p {
     font-family: 'Asian Ninja', sans-serif;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 18px;
     margin-bottom: 10px;
     margin-left: -25px;
@@ -664,12 +664,12 @@ body {
     border-radius: 20px;
     padding: 20px;
     margin: 30px auto;
-    max-width: 750px;
+    max-width: 680px;
 }
 
 .village-page h1 {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Last Ninja', sans-serif;
 }
 
@@ -681,7 +681,7 @@ body {
 }
 
 .village img {
-    width: 280px;
+    width: 260px;
     height: auto;
     border-radius: 50%;
     border: 2px solid #fff;
@@ -690,7 +690,7 @@ body {
 .village p {
     margin-top: 12px;
     font-family: 'Ninja Naruto', sans-serif;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .lock-icon {
@@ -698,7 +698,7 @@ body {
     top: 45%; 
     left: 50%; 
     transform: translate(-50%, -60%);
-    width: 280px; 
+    width: 260px; 
     height: 75%;
     background: url('Images/hugeicons--locked.png') no-repeat center center, rgba(65, 61, 61, 0.5); 
     background-size: contain; 
