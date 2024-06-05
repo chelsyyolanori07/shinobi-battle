@@ -648,7 +648,7 @@ body {
 .aboutpage a {
     color: white;
     font-size: 15px;
-    /* display: none; */
+    display: none;
 }
 
 .villages a {
@@ -773,6 +773,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 
 
   
