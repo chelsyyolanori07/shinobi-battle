@@ -1,0 +1,778 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: 'Last Ninja';
+    src: url('lastninja.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Ninja Naruto';
+    src: url('njnaruto.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Asian Ninja';
+    src: url('AsianNinja.otf') format('truetype');
+}
+
+.header {
+    margin-top: 10px; 
+    padding: 5px 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(228, 217, 217);
+    opacity: 0.8;
+    border-radius: 50px; 
+    font-size: 0.8em; 
+}
+
+body {
+    background-image: url('Images/background\ arena.jpg');
+    background-size: cover;
+    background-position: center;
+}
+  
+.actions {
+    width: 100%;
+    text-align: center;
+    visibility: visible;   
+}
+  
+.audio {
+    text-align: left;
+}
+
+.interface {
+    width: 100%;
+    border: 2px solid rgb(181, 54, 54);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 750px;
+    text-align: center;
+    font-size: 14px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.character-name {
+    margin-bottom: 20px;
+}
+
+.interface a {
+    display: flex;
+    flex-wrap: nowrap;
+}
+  
+.interface img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.img-avatar {
+    width: 200px !important;
+    height: 200px !important;
+}
+
+.header p {
+    font-family:'Last Ninja', sans-serif;
+}
+
+.header h2 {
+    font-family: 'Ninja Naruto', sans-serif;
+}
+
+.interface a {
+    display: flex;
+    flex-wrap: nowrap;
+    text-decoration: none;
+}
+
+.interface a > div {
+    margin-left: 10px;
+}
+
+.interface h3 {
+    font-family: 'Ninja Naruto', sans-serif;
+    font-size: 23px;
+    padding: 25px;
+    margin-left: -5px;
+}
+
+.interface p {
+    font-family: 'Asian Ninja', sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    margin-bottom: 10px;
+    margin-left: -5px;
+}
+
+.btn-prefight {
+    display: inline-block; 
+    border-radius: 5px;
+    margin-right: 10px; 
+}
+
+.actions {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.actions a {
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Last Ninja', sans-serif;
+    color: #000000;
+}
+
+/* Apply consistent styling to both buttons */
+.actions a, #toggleInventoryButton, #toggleAbilitiesButton { 
+    background-color: rgb(228, 217, 217);
+    color: #000000;
+    border: none;
+    padding: 10px 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    opacity: 0.7;
+    font-family: 'Last Ninja', sans-serif;
+    border-radius: 5px;
+    text-decoration: underline;
+    margin-right: 10px;
+}
+
+.actions a:hover, #toggleInventoryButton:hover, #toggleAbilitiesButton:hover { 
+    opacity: 1; 
+}
+
+#toggleInventoryButton, #toggleAbilitiesButton { 
+    display: none; 
+    margin-right: 10px; 
+}
+
+.close-inventory-button, .close-abilities-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px; 
+    font-weight: bold;
+}
+  
+.arena {
+    width: 100%;
+    background-color: #d8d1d1;
+    opacity: 0.7;
+    background-image: url('Images/Background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40vh;
+    visibility: hidden;
+}
+
+.naruto .character-name {
+    color: rgb(221, 108, 22);
+}
+
+.naruto .character-description {
+    color: rgb(221, 95, 23);
+}
+
+.sakura {
+    color: rgb(214, 48, 76);
+}
+
+.sasuke {
+    color: rgb(68, 11, 122);
+}
+
+.kakashi {
+    color: rgb(52, 50, 50);
+}
+
+.enemy {
+    font-family: 'Ninja Naruto', sans-serif;
+    width: 100%;
+    border: 2px solid rgb(181, 54, 54);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 750px;
+    text-align: center;
+    font-size: 14px;
+    display: none;
+} 
+
+.enemy img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.enemy h3 {
+    font-family: 'Ninja Naruto', sans-serif;
+    font-size: 23px;
+    padding: 25px;
+    margin-left: -20px;
+}
+
+.enemy p {
+    font-family: 'Asian Ninja', sans-serif;
+    font-size: 17px;
+    line-height: 18px;
+    margin-bottom: 10px;
+    margin-left: -25px;
+}
+
+#play-pause-button svg {
+    width: 25px; 
+    height: 25px; 
+    display: none; 
+}
+
+#play-pause-button svg:nth-child(1) {
+    display: block; 
+}
+
+#play-pause-button svg:nth-child(2) {
+    display: none; 
+}
+
+#play-pause-button { 
+    margin-top: 10px; 
+    margin-left: 10px; 
+}
+
+.inventory, .abilities {
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px;
+    background-color: #e8c9c9;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(55, 51, 51, 0.1);
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto; 
+}
+  
+.inventory-item, .ability-item {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    width: 130px;
+    height: 170px;
+    text-align: center;
+    background-color: #6d6969;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+  
+.inventory-item:hover, .ability-item:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+  
+.inventory-item img, .ability-item img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+  
+.inventory-item p, .ability-item p {
+    margin: 5px 0;
+    color: #fbf3f3;
+    font-size: 13px;
+    line-height: 1.4;
+    font-family: 'Ninja Naruto', sans-serif;
+}
+  
+.item-image, .ability-image {
+    display: block;
+    width: 100px;
+    height: auto;
+}
+  
+.quantity-badge {
+    font-family: 'Last Ninja', sans-serif;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(220, 188, 188);
+    color: rgb(0, 0, 0);
+    padding: 2px 5px;
+    border-radius: 10px; 
+    font-size: 0.8em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px; 
+    height: 18px;
+}
+
+.inventory-dialog, .abilities-dialog {
+    position: fixed; 
+    top: 50%; 
+    left: auto; 
+    right: 70px; 
+    transform: translateY(-50%); 
+    display: none; 
+    background-color: #f7f4f4;
+    border: 1px solid #a1a1a1;
+    padding: 30px;
+    z-index: 1000; 
+    border-radius: 20px;
+    max-width: 420px;
+}
+
+#selected-item-panel, #selected-ability-panel {
+    display: none;
+    position: absolute; 
+    top: 50%; 
+    left: auto; 
+    right: 70px; 
+    transform: translateY(-50%); 
+    width: 300px; 
+    padding: 10px;
+    background-color: #dad0d0; 
+    border: 1px solid #666363; 
+    opacity: 0.9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    z-index: 1001;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Ninja Naruto', sans-serif;
+    text-align: center; 
+    border-radius: 60%;
+}
+
+#selected-item-panel img, #selected-ability-panel img {
+    width: 50px;
+    height: 50px;
+}
+
+#selected-item-panel h3, #selected-ability-panel h3 {
+    text-align: center;
+    margin-bottom: 10px; 
+    font-size: 14px;
+}
+  
+#selected-item-panel p, #selected-ability-panel p {
+    text-align: center;
+    margin-bottom: 20px; 
+    font-size: 12px;
+}
+
+.category-header {
+    font-family: 'Last Ninja', sans-serif;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.character-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+#defeated-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(124, 118, 118, 0.5);
+    background-size: contain;
+    display: none;
+}
+  
+.hidden {
+    display: none;
+}
+
+.player-details, .enemy-details {
+    margin-right: 20px; 
+}
+
+.heptagon-badge {
+    position: absolute;
+    left: -30px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 33px; 
+    height: 33px; 
+    background: #d8c6c6; 
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: 0 0 0 15px #000;
+}
+
+.icon-heart::before, .icon-yinyang::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+}
+
+.icon-heart::before {
+    content: "\2764"; 
+    font-size: 20px; 
+}
+
+.icon-yinyang::before {
+    content: "\262F";
+    font-size: 20px; 
+}
+
+.player-bars, .enemy-bars {
+    display: flex; 
+    flex-direction: column; 
+    margin-left: 15px;
+    justify-content: center;
+}
+
+.health-bar, .chakra-bar {
+    width: 220px;
+    height: 20px; 
+    background-color: #ddd;
+    border: 1px solid #333;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    padding-left: 30px; 
+}
+
+.chakra-cost-overlay {
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    height: 100%;
+    width: 0;
+    background-color: rgba(61, 148, 241, 0.5); 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: black;
+    z-index: 2;
+    font-family: 'Ninja Naruto', sans-serif;
+    transition: width 0.5s ease-in-out; 
+}
+
+.health-fill, .chakra-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    transition: width 0.5s ease-in-out; 
+    border-radius: 5px;
+}
+
+.health-value, .chakra-value {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 12px; 
+    color: #000000; 
+    font-family: 'Ninja Naruto', sans-serif;
+    z-index: 2; 
+}
+
+.health-player, .chakra-player {
+    display: none;
+}
+
+.health-enemy, .chakra-enemy {
+    display: none;
+}
+
+.level-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 10px;
+    background: rgba(175, 155, 170, 0.5);
+    border-radius: 10px;
+    max-width: 220px; 
+    margin-top: 10px;
+}
+
+.level-badge {
+    position: relative;
+    width: 35px; 
+    height: 35px; 
+    background: #d8c6c6; 
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: 0 0 0 50px #000; 
+    font-family: 'Ninja Naruto', sans-serif;
+}
+
+.icon-star::before {
+    content: "\2605"; 
+    font-size: 23px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+}
+
+#exp-bar-container {
+    width: 220px;
+    height: 20px; 
+    background-color: #ddd;
+    border: 1px solid #333;
+    border-radius: 5px;
+    overflow: hidden; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    margin-left: -3px;
+}
+  
+#exp-bar {
+    width: 0%; 
+    height: 100%;
+    background-color: #f375ee;
+    transition: width 0.5s ease-in-out;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 20px; 
+    color: #080808; 
+}
+
+#level-display {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    font-size: 12px; 
+    color: #000000; 
+    font-family: 'Ninja Naruto', sans-serif;
+    z-index: 2; 
+}
+
+.avatar-container {
+    position: relative;
+}
+
+#special-points-button {
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    padding: 10px 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #4CAF50; 
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Ninja Naruto', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+#special-points-button:hover {
+    background-color: #45a049; 
+}
+
+#special-points-button:active {
+    background-color: #369636; 
+    transform: translateY(2px); 
+}
+  
+.hidden {
+    display: none; 
+} 
+
+.plus-button {
+    margin-left: 10px; 
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 5px;
+    position: absolute;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+.health-plus-button-container, .chakra-plus-button-container {
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%); 
+    z-index: 10;
+    display: flex;
+    right: 7px;
+}
+   
+.aboutpage a {
+    color: white;
+    font-size: 15px;
+    display: none;
+}
+
+.villages a {
+    color: white;
+    font-size: 15px;
+}
+
+.village-page {
+    text-align: center;
+    width: 100%;
+    border: 2px solid rgb(181, 54, 54);
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 750px;
+}
+
+.village-page h1 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Last Ninja', sans-serif;
+}
+
+.village {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.village img {
+    width: 280px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.village p {
+    margin-top: 12px;
+    font-family: 'Ninja Naruto', sans-serif;
+    font-size: 17px;
+}
+
+.lock-icon {
+    position: absolute;
+    top: 45%; 
+    left: 50%; 
+    transform: translate(-50%, -60%);
+    width: 280px; 
+    height: 75%;
+    background: url('Images/hugeicons--locked.png') no-repeat center center, rgba(65, 61, 61, 0.5); 
+    background-size: contain; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.locked .lock-icon {
+    display: flex; 
+}
+
+.unlocked .lock-icon {
+    display: none; 
+}
+
+.lock-text {
+    position: absolute;
+    top: 55%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255); 
+    opacity: 0.7; 
+    font-size: 11px; 
+    font-family: 'Last Ninja', sans-serif;
+}
+  
+.unlocked .lock-text {
+    display: none;
+}
+
+#goBackButton {
+    background-color: rgb(228, 217, 217);
+    color: #000000;
+    border: none;
+    padding: 10px 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    opacity: 0.7;
+    font-family: 'Last Ninja', sans-serif;
+    border-radius: 5px;
+    text-decoration: underline; 
+}
+
+.background-konohagakure {
+    background-image: url('Images/Villages/Konoha\ Hidden\ Leaf\ Village.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+.background-sunagakure {
+    background-image: url('Images/Villages/Sunagakure\ Hidden\ Sand\ Village.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+.background-kirigakure {
+    background-image: url('Images/Villages/Kirigakure\ Hidden\ Mist\ Village.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+.background-kumogakure {
+    background-image: url('Images/Villages/Kumogakure\ Hidden\ Cloud\ Village.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+.background-iwagakure {
+    background-image: url('Images/Villages/Iwagakure\ Hidden\ Stone\ Village.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+  

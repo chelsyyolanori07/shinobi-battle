@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naruto Shinobi Battles</title>
+  <link rel="icon" href="Images/fav icon naruto clan logo-192x192.png" />
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="Javascript Folder/features/music.js"></script>
+  <script src="Javascript Folder/main_logic/player.js"></script>
+  <script src="Javascript Folder/main_logic/enemy.js"></script>
+  <script src="Javascript Folder/main_logic/gameManager.js"></script>
+  <script src="Javascript Folder/features/levelUpSystem.js"></script>
+  <script src="Javascript Folder/features/villages.js"></script>
+  <script src="Javascript Folder/main_logic/characterMoves.js"></script>
+  <script src="Javascript Folder/features/entityBars.js"></script>
+	<script src="Javascript Folder/features/inventory.js"></script>
+  <script src="Javascript Folder/features/abilities.js"></script>
+</head>
+<body>
+  <div class="audio">
+    <audio id="background-music" autoplay loop>
+      <source src="Naruto Shippuden Unreleased OST - Konoha Peace.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <button id="play-pause-button">
+      <!-- Sound On Icon SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1.75 5.75v4.5h2.5l4 3V2.75l-4 3zm9 .5s1 .5 1 1.75s-1 1.75-1 1.75m1-6.5c2 1 3 2.5 3 4.75s-1 3.75-3 4.75" />
+      </svg>
+      <!-- Sound Off Icon SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1.75 5.75v4.5h2.5l4 3V2.75l-4 3zm12.5 0l-3.5 4.5m0-4.5l3.5 4.5" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="header"></div>
+
+  <div class="interface"></div>
+
+  <div id="inventory" class="inventory-dialog"></div>
+
+	<div class="actions">
+		<button id="toggleInventoryButton" onclick="toggleInventory()">Inventory</button>
+	</div>
+
+	<div id="abilities" class="abilities-dialog"></div>
+
+	<div class="actions">
+		<button id="toggleAbilitiesButton" onclick="toggleAbility()">Abilities</button>
+	</div>
+
+	<div class="arena"></div>
+  
+	<div class="enemy"></div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const selectedVillage = localStorage.getItem('selectedVillageId');
+      const villageClassMapping = {
+        'Konohagakure': 'background-konohagakure',
+        'Sunagakure': 'background-sunagakure',
+        'Kirigakure': 'background-kirigakure',
+        'Kumogakure': 'background-kumogakure',
+        'Iwagakure': 'background-iwagakure'
+      };
+      if (selectedVillage && villageClassMapping[selectedVillage]) {
+        document.body.className = villageClassMapping[selectedVillage];
+      }
+      GameManager.startArena();
+    });
+  </script>  
+</body>
+</html>

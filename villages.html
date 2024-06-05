@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villages for Battle</title>
+  <link rel="icon" href="Images/fav icon naruto clan logo-192x192.png" />
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      background-image: url('Images/Real\ Naruto\ World\ Map.png');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+  <script src="Javascript Folder/features/music.js"></script>
+  <script src="Javascript Folder/main_logic/player.js"></script>
+  <script src="Javascript Folder/main_logic/enemy.js"></script>
+  <script src="Javascript Folder/main_logic/gameManager.js"></script>
+  <script src="Javascript Folder/features/levelUpSystem.js"></script>
+  <script src="Javascript Folder/features/villages.js"></script>
+  <script src="Javascript Folder/main_logic/characterMoves.js"></script>
+  <script src="Javascript Folder/features/entityBars.js"></script>
+	<script src="Javascript Folder/features/inventory.js"></script>
+  <script src="Javascript Folder/features/abilities.js"></script>
+</head>
+<body>
+  <div class="audio">
+    <audio id="background-music" autoplay loop>
+      <source src="Naruto Shippuden Unreleased OST - Konoha Peace.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <button id="play-pause-button">
+      <!-- Sound On Icon SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1.75 5.75v4.5h2.5l4 3V2.75l-4 3zm9 .5s1 .5 1 1.75s-1 1.75-1 1.75m1-6.5c2 1 3 2.5 3 4.75s-1 3.75-3 4.75" />
+      </svg>
+      <!-- Sound Off Icon SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1.75 5.75v4.5h2.5l4 3V2.75l-4 3zm12.5 0l-3.5 4.5m0-4.5l3.5 4.5" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="header" style="display: none;"></div>
+
+  <div class="interface" style="display: none;"></div>
+
+  <div class="village-page">
+    <h1>Villages</h1>
+
+      <div class="village" id="konohagakure" onclick="selectVillageId('konohagakure')" data-level="0" data-bg="background-konohagakure">
+        <img src="Images/Villages/Konohagakure.jpg" alt="Konohagakure" class="unlocked">
+        <p>Konohagakure<br>(The Hidden Leaf Village)</p>
+      </div>
+
+      <div class="village" id="sunagakure" onclick="selectVillageId('sunagakure')" data-bg="background-sunagakure">
+        <div class="lock-icon"><span class="lock-text">Unlocks at lvl 3</div> 
+          <img src="Images/Villages/Sunagakure.jpg" alt="Sunagakure" class="locked">
+          <p>Sunagakure<br>(The Hidden Sand Village)</p>
+      </div>
+
+      <div class="village" id="kirigakure" onclick="selectVillageId('kirigakure')" data-bg="background-kirigakure">
+        <div class="lock-icon"><span class="lock-text">Unlocks at lvl 7</div> 
+          <img src="Images/Villages/Kirigakure.jpg" alt="Kirigakure" class="locked">
+          <p>Kirigakure<br>(The Hidden Mist Village)</p>
+      </div>
+
+      <div class="village" id="kumogakure" onclick="selectVillageId('kumogakure')" data-bg="background-kumogakure">
+        <div class="lock-icon"><span class="lock-text">Unlocks at lvl 12</div> 
+          <img src="Images/Villages/Kumogakure.jpg" alt="Kumogakure" class="locked">
+          <p>Kumogakure<br>(The Hidden Cloud Village)</p>
+      </div>
+
+      <div class="village" id="iwagakure" onclick="selectVillageId('iwagakure')" data-bg="background-iwagakure">
+        <div class="lock-icon"><span class="lock-text">Unlocks at lvl 17</div> 
+          <img src="Images/Villages/Iwagakure.jpg" alt="Iwagakure" class="locked">
+          <p>Iwagakure<br>(The Hidden Stone Village)</p>
+      </div>
+      <br>
+    
+    <a href="index.html" class="btn-prefight" id="goBackButton">Select Player</a>
+
+    <div id="inventory" class="inventory-dialog"></div>
+
+		<div class="actions" style="display: none;">
+			<button id="toggleInventoryButton" onclick="toggleInventory()">Inventory</button>
+		</div>
+
+    
+		<div id="abilities" class="abilities-dialog"></div>
+
+		<div class="actions">
+			<button id="toggleAbilitiesButton" onclick="toggleAbility()">Abilities</button>
+		</div>
+		
+
+		<div class="arena" style="display: none;"></div>
+		
+  </div>
+  <script>
+    function selectVillageId(villageId) {
+      const villageMapping = {
+        konohagakure: 'Konohagakure',
+        sunagakure: 'Sunagakure',
+        kirigakure: 'Kirigakure',
+        kumogakure: 'Kumogakure',
+        iwagakure: 'Iwagakure'
+      };
+      const villageClassMapping = {
+        konohagakure: 'background-konohagakure',
+        sunagakure: 'background-sunagakure',
+        kirigakure: 'background-kirigakure',
+        kumogakure: 'background-kumogakure',
+        iwagakure: 'background-iwagakure'
+      };
+      localStorage.setItem('selectedVillageId', villageMapping[villageId]);
+      document.body.className = villageClassMapping[villageId];
+      window.location.href = 'arenaBattlePage.html';
+    }
+  </script>
+</body>
+</html>

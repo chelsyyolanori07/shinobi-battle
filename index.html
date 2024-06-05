@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Naruto Shinobi Battles</title>
+		<link rel="icon" href="Images/fav icon naruto clan logo-192x192.png" />
+
+		<link rel="stylesheet" href="styles.css" />
+
+		<script src="Javascript Folder/features/music.js"></script>
+		<script src="Javascript Folder/main_logic/player.js"></script>
+		<script src="Javascript Folder/main_logic/enemy.js"></script>
+		<script src="Javascript Folder/main_logic/gameManager.js"></script>
+		<script src="Javascript Folder/features/levelUpSystem.js"></script>
+		<script src="Javascript Folder/main_logic/characterMoves.js"></script>
+		<script src="Javascript Folder/features/entityBars.js"></script>
+		<script src="Javascript Folder/features/inventory.js"></script>
+		<script src="Javascript Folder/features/abilities.js"></script>
+	</head>
+
+	<body>
+		<div class="audio">
+			<audio id="background-music" autoplay loop>
+				<source src="Naruto Shippuden Unreleased OST - Konoha Peace.mp3" type="audio/mpeg" />
+				Your browser does not support the audio element.
+			</audio>
+
+			<button id="play-pause-button">
+				<!-- Sound On Icon SVG -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+					<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1.75 5.75v4.5h2.5l4 3V2.75l-4 3zm9 .5s1 .5 1 1.75s-1 1.75-1 1.75m1-6.5c2 1 3 2.5 3 4.75s-1 3.75-3 4.75" />
+				</svg>
+				<!-- Sound Off Icon SVG -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+					<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M1.75 5.75v4.5h2.5l4 3V2.75l-4 3zm12.5 0l-3.5 4.5m0-4.5l3.5 4.5" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="header">
+			<p>Play the silliest Naruto Shinobi Battles game ever to be made :)</p>
+			<br />
+			<h2>Choose Your Favorite Shinobi Character from Team 7 Konoha</h2>
+			<br />
+		</div>
+
+		<div class="interface">
+			<a id="naruto" data-character="Naruto Uzumaki" class="character naruto">
+				<img src="Images/Characters/Naruto Uzumaki.jpg" alt="Naruto Uzumaki" />
+				<div>
+					<h3 class="character-name">Naruto Uzumaki</h3>
+					<p class="character-description">Naruto Uzumaki is a young ninja from Konoha. Despite being an outcast due to being the jinchūriki of the Nine-Tails fox, Naruto dreams of becoming the Hokage. His unwavering determination, loyalty, and signature techniques make him one of the strongest ninja in shinobi history.</p>
+				</div>
+			</a>
+
+			<a id="sasuke" data-character="Sasuke Uchiha" class="character-sasuke">
+				<img src="Images/Characters/Sasuke Uchiha.jpg" alt="Sasuke Uchiha" />
+				<div class="sasuke">
+					<h3>Sasuke Uchiha</h3>
+					<br />
+					<p>Sasuke Uchiha is one of the last surviving members of Konohagakure’s Uchiha clan. After his older brother, Itachi, slaughtered their clan, Sasuke made it his mission in life to avenge them by killing Itachi. His journey is marked by complex emotions, rivalry with Naruto Uzumaki, and a quest for power and redemption.</p>
+				</div>
+			</a>
+
+			<a id="sakura" data-character="Sakura Haruno" class="character sakura">
+				<img src="Images/Characters/Sakura Haruno.jpg" alt="Sakura Haruno" />
+				<div class="sakura">
+					<h3 class="character-name">Sakura Haruno</h3>
+					<p class="character-description">Sakura is a kunoichi affiliated with Konohagakure and a member of Team 7. Initially infatuated with Sasuke, she grows to become a skilled medical ninja and a loyal friend to Naruto.</p>
+				</div>
+			</a>
+
+			<a id="kakashi" data-character="Kakashi Sensei" class="character kakashi">
+				<img src="Images/Characters/Kakashi Sensei.jpg" alt="Kakashi Sensei" class="character kakashi" />
+				<div class="kakashi">
+					<h3 class="character-name">Kakashi Sensei</h3>
+					<p class="character-description">Kakashi is the teacher of Team 7. Initially cold and apathetic, he warms up over time. His Sharingan allows him to copy opponents’ abilities, and he becomes a key figure in the village.</p>
+				</div>
+			</a>
+		</div>
+
+		<div id="inventory" class="inventory-dialog"></div>
+
+		<div class="actions">
+			<button id="toggleInventoryButton" onclick="toggleInventory()">Inventory</button>
+		</div>
+
+		<div id="abilities" class="abilities-dialog"></div>
+
+		<div class="actions">
+			<button id="toggleAbilitiesButton" onclick="toggleAbility()">Abilities</button>
+		</div>
+
+		<div class="arena"></div>
+
+		<div class="enemy"></div>
+
+		<div class="aboutpage">
+			<a href="aboutme.html" target="_blank">About Me :)</a>
+		</div>
+		<script>
+			function selectCharacter(character) {
+				localStorage.setItem('selectedPlayerClassType', character);
+				window.location.href = 'villages.html'; 
+			}
+			document.getElementById('naruto').addEventListener('click', function() {
+				selectCharacter('Naruto Uzumaki');
+			});
+			document.getElementById('sasuke').addEventListener('click', function() {
+				selectCharacter('Sasuke Uchiha');
+			});
+			document.getElementById('sakura').addEventListener('click', function() {
+				selectCharacter('Sakura Haruno');
+			});
+			document.getElementById('kakashi').addEventListener('click', function() {
+				selectCharacter('Kakashi Sensei');
+			});
+		</script>
+	</body>
+</html>
