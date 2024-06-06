@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let soundOnIcon = playPauseButton.querySelectorAll('svg')[0]; 
   let soundOffIcon = playPauseButton.querySelectorAll('svg')[1]; 
 
+  let savedTime = localStorage.getItem('backgroundMusicTime');
+  if (savedTime !== null) {
+    backgroundMusic.currentTime = parseFloat(savedTime);
+  }
+
   function updateButtonIcons() {
     if (backgroundMusic.paused) {
       soundOnIcon.style.display = 'none';
@@ -31,4 +36,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     updateButtonIcons();
   });
+
+  setInterval(() => {
+    localStorage.setItem('backgroundMusicTime', backgroundMusic.currentTime);
+  }, 1000);
 });
