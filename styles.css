@@ -259,7 +259,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(55, 51, 51, 0.1);
     width: 100%;
-    max-width: 1000px;
+    max-width: 230px;
     margin: 0 auto; 
 }
   
@@ -269,7 +269,7 @@ body {
     overflow: hidden;
     margin: 10px;
     width: 100px;
-    height: 130px;
+    height: 135px;
     text-align: center;
     background-color: #6d6969;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -327,15 +327,17 @@ body {
     position: fixed; 
     top: 50%; 
     left: auto; 
-    right: 70px; 
+    right: 20px; 
     transform: translateY(-50%); 
     display: none; 
     background-color: #f7f4f4;
     border: 1px solid #a1a1a1;
-    padding: 30px;
+    padding: 20px;
     z-index: 1000; 
     border-radius: 20px;
-    max-width: 420px;
+    max-width: 250px;
+    max-height: 720px;
+    opacity: 0.8;
 }
 
 #selected-item-panel, #selected-ability-panel {
@@ -343,7 +345,7 @@ body {
     position: absolute; 
     top: 50%; 
     left: auto; 
-    right: 70px; 
+    right: 50px; 
     transform: translateY(-50%); 
     width: 175px; 
     padding: 10px;
@@ -378,7 +380,7 @@ body {
 
 .category-header {
     font-family: 'Last Ninja', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     margin-top: 20px;
 }
 
