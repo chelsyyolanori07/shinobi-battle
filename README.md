@@ -1,7 +1,7 @@
 Okay first of all i am really thankful to God for letting me finish my first game project...
 Also this is my first time to publish a public repository which is kinda a bit awkward but anyway i believe it's a part of my learning journey so there you go lol 
 
-Second of all i just want to say thank you so much to Ed Sensei that patiently guides me and dealing with my silly lil code everyday hakajkj... You deserve all the good things in the world huhuhu
+Second of all i just want to say thank you so much to Ed Sensei(https://github.com/Coloby) that patiently guides me and dealing with my silly lil code everyday hakajkj... You deserve all the good things in the world huhuhu
 
 So yeahh this project is just a silly lil game that i made using HTML, CSS, and JavaScript because i am still really really a beginner.
 I follow this tutorial on youtube in case you want to check it out (https://youtu.be/M6sA8fvMCuA?si=Je0-ktX6FKuwwvsV)
