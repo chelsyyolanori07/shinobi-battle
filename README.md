@@ -19,7 +19,7 @@ still my game is not perfect but at least you can find some new features inside 
 2. For the enemy i use enemy character basis on clan inside that specific village (so the player will fight the enemy inside the village itself)
 3. I fetch the enemy from Naruto API and here is the link (https://narutodb.xyz/)
 4. When you play the game you will see the chakra bar and health bar in the UI
-5. Level up system
+5. Level up system and special points feature
 6. Inventory item 
 7. Abilities for player that can be used after the player reach certain level + the ability for enemy based on clan using enemy AI probability to decide when enemy will use their ability againts the player
 
