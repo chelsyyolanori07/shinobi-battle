@@ -25,7 +25,7 @@ still my game is not perfect but at least you can find some new features inside 
 
 I guess for now that's the features in my silly lil naruto game, feel free to play this game if you want to ( https://shinobi-battle.netlify.app/)..<br>
 Honestly i am not sure if anyone reading this but if you do i just want to say "How you do that lol??"
-so yeahh thank you so much for reading this and for passing by and check my first silly public lil respository project
+so yeahh thank you so much for reading this and for passing by and check my first silly lil public respository project
 i really hope you have a great day/night once again thank youuu so much don't forget to breathee :)
 
 See you in Konoha......
