@@ -19,13 +19,13 @@ still my game is not perfect but at least you can find some new features inside 
 2. For the enemy i use enemy character basis on clan inside that specific village (so the player will fight the enemy inside the village itself)
 3. I fetch the enemy from Naruto API and here is the link (https://narutodb.xyz/)
 4. When you play the game you will see the chakra bar and health bar in the UI
-5. Level up system
+5. Level up system and special points feature
 6. Inventory item 
 7. Abilities for player that can be used after the player reach certain level + the ability for enemy based on clan using enemy AI probability to decide when enemy will use their ability againts the player
 
 I guess for now that's the features in my silly lil naruto game, feel free to play this game if you want to ( https://shinobi-battle.netlify.app/)..<br>
 Honestly i am not sure if anyone reading this but if you do i just want to say "How you do that lol??"
-so yeahh thank you so much for reading this and for passing by and check my first silly public lil respository project
+so yeahh thank you so much for reading this and for passing by and check my first silly lil public respository project
 i really hope you have a great day/night once again thank youuu so much don't forget to breathee :)
 
 See you in Konoha......
