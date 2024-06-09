@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateButtonIcons();
   });
 
-  setInterval(() => {
+  backgroundMusic.addEventListener('timeupdate', function() {
     localStorage.setItem('backgroundMusicTime', backgroundMusic.currentTime);
-  }, 1000);
+  });
 });
