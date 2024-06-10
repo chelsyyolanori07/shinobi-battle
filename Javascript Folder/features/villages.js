@@ -63,5 +63,4 @@ const completeLevel = () => unlockVillages();
 
 document.addEventListener('DOMContentLoaded', () => {
   unlockVillages();
-  showPlayer(); 
 });
