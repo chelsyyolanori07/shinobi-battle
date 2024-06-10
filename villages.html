@@ -14,17 +14,7 @@
       background-repeat: no-repeat;
     }
   </style>
-
   <script src="Javascript Folder/features/music.js"></script>
-  <script src="Javascript Folder/main_logic/player.js"></script>
-  <script src="Javascript Folder/main_logic/enemy.js"></script>
-  <script src="Javascript Folder/main_logic/gameManager.js"></script>
-  <script src="Javascript Folder/features/levelUpSystem.js"></script>
-  <script src="Javascript Folder/features/villages.js"></script>
-  <script src="Javascript Folder/main_logic/characterMoves.js"></script>
-  <script src="Javascript Folder/features/entityBars.js"></script>
-	<script src="Javascript Folder/features/inventory.js"></script>
-  <script src="Javascript Folder/features/abilities.js"></script>
 </head>
 <body>
   <div class="audio">
@@ -44,10 +34,6 @@
       </svg>
     </button>
   </div>
-
-  <div class="header" style="display: none;"></div>
-
-  <div class="interface" style="display: none;"></div>
 
   <div class="village-page">
     <h1>Villages</h1>
@@ -82,24 +68,7 @@
       </div>
       <br>
     
-    <a href="index.html" class="btn-prefight" id="goBackButton">Select Player</a>
-
-    <div id="inventory" class="inventory-dialog"></div>
-
-		<div class="actions" style="display: none;">
-			<button id="toggleInventoryButton" onclick="toggleInventory()">Inventory</button>
-		</div>
-
-    
-		<div id="abilities" class="abilities-dialog"></div>
-
-		<div class="actions">
-			<button id="toggleAbilitiesButton" onclick="toggleAbility()">Abilities</button>
-		</div>
-		
-
-		<div class="arena" style="display: none;"></div>
-		
+    <a href="index.html" class="btn-prefight" id="goBackButton">Select Player</a>	
   </div>
   <script>
     function selectVillageId(villageId) {
