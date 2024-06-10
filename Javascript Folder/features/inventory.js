@@ -188,8 +188,6 @@ const applyItemEffect = (itemKey) => {
     updatePlayerUI(); 
     _updatePlayerBars();
     LevelUpSystem.saveProgress(); 
-  } else {
-    console.log('Item does not exist or quantity is already 0');
   }
 };
 
@@ -203,8 +201,6 @@ const addItemToInventory = (itemKey) => {
   if (inventoryItems.hasOwnProperty(itemKey)) {
     inventoryItems[itemKey].quantity++;
     showInventory();
-  } else {
-    console.log('Item does not exist in the inventory');
   }
   saveInventory();
 };

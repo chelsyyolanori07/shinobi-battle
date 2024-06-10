@@ -26,7 +26,7 @@ let abilities = {
     },
     kuchiyoseNoJutsu: {
       name: "Kuchiyose no Jutsu: Gamabunta",
-      description: "Consume health (-15)<br>Buff chakra (+70)<br>strength (+30)<br>chakra cost (-20)",
+      description: "Buff chakra (+70)<br>Buff strength (+30)<br>Chakra cost (-20)<br>Consume health (-15)",
       image: "Images/Abilities/Kuchiyose no Jutsu Gamabunta.jpg",
       levelRequired: 7,
       chakraCost: 20,
@@ -40,7 +40,7 @@ let abilities = {
     },
     nineTailsChakraMode: {
       name: "Nine-tails Chakra Mode",
-      description: "Consume health (-30)<br>Buff chakra (+100)<br>maxChakra (+70)<br>strength (+50)<br>chakra cost (-25)",
+      description: "Buff chakra (+100)<br>Buff maxChakra (+70)<br>Buff strength (+50)<br>chakra cost (-25)<br>Consume health (-30)",
       image: "Images/Abilities/Nine-Tails Chakra Mode.jpg",
       levelRequired: 8,
       chakraCost: 25,
@@ -57,7 +57,7 @@ let abilities = {
   basic: {
     healingJutsu: {
       name: "Healing Jutsu",
-      description: "Heals (+100)<br>maxHealth (+70)<br>chakra cost (-20)",
+      description: "Heals (+100)<br>Add maxHealth (+70)<br>chakra cost (-20)",
       image: "Images/Abilities/Healing Jutsu.jpg",
       levelRequired: 2,
       chakraCost: 20,
@@ -70,7 +70,7 @@ let abilities = {
     },
     kunaiStorm: {
       name: "Kunai Storm",
-      description: "Consume health (-15)<br>Debuff enemy health (-35)<br>enemy agility (-35)<br>chakra cost (-20)",
+      description: "Debuff enemy health (-35)<br>Debuff enemy agility (-35)<br>Chakra cost (-20)<br>Consume health (-15)",
       image: "Images/Abilities/Kunai Storm.jpg",
       levelRequired: 3,
       chakraCost: 20,
@@ -84,7 +84,7 @@ let abilities = {
     },
     blazingStrike: {
       name: "Blazing Strike",
-      description: "Consume health (-30)<br>Debuff enemy health (-30)<br>strength (-50)<br>chakra cost (-30)",
+      description: "Debuff enemy health (-30)<br>Debuff enemy strength (-50)<br>chakra cost (-30)<br>Consume health (-30)",
       image: "Images/Abilities/Blazing Strike.jpg",
       levelRequired: 4,
       chakraCost: 30,
@@ -98,7 +98,7 @@ let abilities = {
     },
     shunshinNoJutsu: {
       name: "Shunshin no Jutsu",
-      description: "Buff speed (+50)<br>agility (+50)<br>chakra cost (-30)",
+      description: "Buff speed (+50)<br>Buff agility (+50)<br>chakra cost (-30)",
       image: "Images/Abilities/Shushin No Jutsu.jpg",
       levelRequired: 5,
       chakraCost: 30,
@@ -115,7 +115,7 @@ let abilities = {
       Uchiha: {
         MangekyoSharingan: {
           name: "Mangekyo Sharingan",
-          description: "Buff chakra (+100)<br>strength (+50)<br>Debuff player chakra (-50)<br>player strength (-50)<br>chakra cost (-30)",
+          description: "Buff chakra (+100)<br>Buff strength (+50)<br>Debuff player chakra (-50)<br>Debuff player strength (-50)<br>chakra cost (-30)",
           image: "Images/Abilities/Mangekyo Sharingan.jpg",
           chakraCost: 30,
           onUse: function(enemy, player) {
@@ -145,7 +145,7 @@ let abilities = {
       Hōzuki: {
         WaterReleaseTateEboshi: {
           name: "Water Release: Tate Eboshi",
-          description: "Buff strength (+50)<br>debuff player health (-50)<br>chakra cost (-20)",
+          description: "Buff strength (+50)<br>Debuff player health (-50)<br>chakra cost (-20)",
           image: "Images/Abilities/Water Release Tate Eboshi.jpg",
           chakraCost: 20,
           onUse: function(enemy, player) {
@@ -160,7 +160,7 @@ let abilities = {
       Yotsuki: {
         BlackLightningBolts: {
           name: "Black Lightning Bolts",
-          description: "Debuff player chakra (-45)<br>player agility (-40)<br>chakra cost (-20)",
+          description: "Debuff player chakra (-45)<br>Debuff player agility (-40)<br>chakra cost (-20)",
           image: "Images/Abilities/Black Lightning Bolt.jpg",
           chakraCost: 20,
           onUse: function(enemy, player) {
@@ -175,7 +175,7 @@ let abilities = {
       Kamizuru: {
         HoneyTrap: {
           name: "Honey Trap",
-          description: "Debuff player speed (-50)<br>player agility (-50)<br>chakra cost (-20)",
+          description: "Debuff player speed (-50)<br>Debuff player agility (-50)<br>chakra cost (-20)",
           image: "Images/Abilities/Honey Trap.jpg",
           chakraCost: 20,
           onUse: function(enemy, player) {
