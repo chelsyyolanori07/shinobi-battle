@@ -2,7 +2,7 @@ let abilities = {
   naruto: {
     rasengan: {
       name: "Rasengan",
-      description: "Damage enemy health (-50)<br>chakra cost (-25)",
+      description: "Health Damage (50)<br>Chakracost (-25)",
       image: "Images/Abilities/Rasengan.jpg",
       levelRequired: 6,
       chakraCost: 25,
@@ -14,7 +14,7 @@ let abilities = {
     },
     rasenshuriken: {
       name: "Rasenshuriken",
-      description: "Damage enemy health (-70)<br>chakra cost (-30)",
+      description: "Health Damage (70)<br>Chakracost (-30)",
       image: "Images/Abilities/Rasenshuriken.jpg",
       levelRequired: 7,
       chakraCost: 30,
@@ -26,7 +26,7 @@ let abilities = {
     },
     kuchiyoseNoJutsu: {
       name: "Kuchiyose no Jutsu: Gamabunta",
-      description: "Buff chakra (+70)<br>Buff strength (+30)<br>Chakra cost (-20)<br>Consume health (-15)",
+      description: "Chakra (+70)<br>Strength (+30)<br>Chakracost (-20)<br>Health (-15)",
       image: "Images/Abilities/Kuchiyose no Jutsu Gamabunta.jpg",
       levelRequired: 7,
       chakraCost: 20,
@@ -40,7 +40,7 @@ let abilities = {
     },
     nineTailsChakraMode: {
       name: "Nine-tails Chakra Mode",
-      description: "Buff chakra (+100)<br>Buff maxChakra (+70)<br>Buff strength (+50)<br>chakra cost (-25)<br>Consume health (-30)",
+      description: "Chakra (+100)<br>MaxChakra (+70)<br>Strength (+50)<br>Chakracost (-25)<br>Health (-30)",
       image: "Images/Abilities/Nine-Tails Chakra Mode.jpg",
       levelRequired: 8,
       chakraCost: 25,
@@ -57,7 +57,7 @@ let abilities = {
   basic: {
     healingJutsu: {
       name: "Healing Jutsu",
-      description: "Heals (+100)<br>Add maxHealth (+70)<br>chakra cost (-20)",
+      description: "Heals (+100)<br>MaxHealth (+70)<br>Chakracost (-20)",
       image: "Images/Abilities/Healing Jutsu.jpg",
       levelRequired: 2,
       chakraCost: 20,
@@ -70,7 +70,7 @@ let abilities = {
     },
     kunaiStorm: {
       name: "Kunai Storm",
-      description: "Debuff enemy health (-35)<br>Debuff enemy agility (-35)<br>Chakra cost (-20)<br>Consume health (-15)",
+      description: "Health damage (35)<br>Agility (-35)<br>Chakracost (-20)<br>Health (-15)",
       image: "Images/Abilities/Kunai Storm.jpg",
       levelRequired: 3,
       chakraCost: 20,
@@ -84,7 +84,7 @@ let abilities = {
     },
     blazingStrike: {
       name: "Blazing Strike",
-      description: "Debuff enemy health (-30)<br>Debuff enemy strength (-50)<br>chakra cost (-30)<br>Consume health (-30)",
+      description: "Health damage (30)<br>Strength (-50)<br>Chakracost (-30)<br>Health (-30)",
       image: "Images/Abilities/Blazing Strike.jpg",
       levelRequired: 4,
       chakraCost: 30,
@@ -98,7 +98,7 @@ let abilities = {
     },
     shunshinNoJutsu: {
       name: "Shunshin no Jutsu",
-      description: "Buff speed (+50)<br>Buff agility (+50)<br>chakra cost (-30)",
+      description: "Speed (+50)<br>Agility (+50)<br>Chakracost (-30)",
       image: "Images/Abilities/Shushin No Jutsu.jpg",
       levelRequired: 5,
       chakraCost: 30,
@@ -115,7 +115,7 @@ let abilities = {
       Uchiha: {
         MangekyoSharingan: {
           name: "Mangekyo Sharingan",
-          description: "Buff chakra (+100)<br>Buff strength (+50)<br>Debuff player chakra (-50)<br>Debuff player strength (-50)<br>chakra cost (-30)",
+          description: "Chakra (+100)<br>Strength (+50)<br>Chakra damage (-50)<br>Strength damage (-50)<br>Chakracost (-30)",
           image: "Images/Abilities/Mangekyo Sharingan.jpg",
           chakraCost: 30,
           onUse: function(enemy, player) {
@@ -131,7 +131,7 @@ let abilities = {
       Kazekage: {
         SandShield: {
           name: "Sand Shield",
-          description: "Debuff player chakra (-50)<br>chakra cost (-20)",
+          description: "Chakra Damage (-50)<br>Chakracost (-20)",
           image: "Images/Abilities/Sand Shield.jpg",
           chakraCost: 20,
           onUse: function(enemy, player) {
@@ -145,7 +145,7 @@ let abilities = {
       Hōzuki: {
         WaterReleaseTateEboshi: {
           name: "Water Release: Tate Eboshi",
-          description: "Buff strength (+50)<br>Debuff player health (-50)<br>chakra cost (-20)",
+          description: "Strength (+50)<br>Health damage (-50)<br>Chakracost (-20)",
           image: "Images/Abilities/Water Release Tate Eboshi.jpg",
           chakraCost: 20,
           onUse: function(enemy, player) {
@@ -160,7 +160,7 @@ let abilities = {
       Yotsuki: {
         BlackLightningBolts: {
           name: "Black Lightning Bolts",
-          description: "Debuff player chakra (-45)<br>Debuff player agility (-40)<br>chakra cost (-20)",
+          description: "Chakra damage (-45)<br>Agility (-40)<br>Chakracost (-20)",
           image: "Images/Abilities/Black Lightning Bolt.jpg",
           chakraCost: 20,
           onUse: function(enemy, player) {
@@ -175,7 +175,7 @@ let abilities = {
       Kamizuru: {
         HoneyTrap: {
           name: "Honey Trap",
-          description: "Debuff player speed (-50)<br>Debuff player agility (-50)<br>chakra cost (-20)",
+          description: "Speed (-50)<br>Agility (-50)<br>Chakracost (-20)",
           image: "Images/Abilities/Honey Trap.jpg",
           chakraCost: 20,
           onUse: function(enemy, player) {
