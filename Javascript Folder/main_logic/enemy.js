@@ -39,7 +39,8 @@ const predefinedEnemies = {
   "Kazekage": [
     { name: "Gaara", health: 300, maxHealth: 300, chakra: 170, maxChakra: 170, strength: 200, agility: 75, speed: 130, image: "Images/Enemies/Kazekage Clan/Gaara.jpg", clan: "Kazekage" },
     { name: "Temari", health: 290, maxHealth: 290, chakra: 160, maxChakra: 160, strength: 190, agility: 70, speed: 120, image: "Images/Enemies/Kazekage Clan/Temari.jpg", clan: "Kazekage" },
-    { name: "Kankuro", health: 280, maxHealth: 280, chakra: 150, maxChakra: 150, strength: 180, agility: 65, speed: 110, image: "Images/Enemies/Kazekage Clan/Kankuro.jpg", clan: "Kazekage" }
+    { name: "Kankuro", health: 280, maxHealth: 280, chakra: 150, maxChakra: 150, strength: 180, agility: 65, speed: 110, image: "Images/Enemies/Kazekage Clan/Kankuro.jpg", clan: "Kazekage" },
+    { name: "Rasa", health: 295, maxHealth: 295, chakra: 165, maxChakra: 165, strength: 195, agility: 80, speed: 140, image:"Images/Enemies/Kazekage Clan/Rasa.jpg", clan: "Kazekage" }
   ],
   "Hōzuki": [
     { name: "Hōzuki Gengetsu", health: 310, maxHealth: 310, chakra: 175, maxChakra: 175, strength: 195, agility: 77, speed: 135, image: "Images/Enemies/Hōzuki Clan/Hōzuki Gengetsu.jpg", clan: "Hōzuki" },
